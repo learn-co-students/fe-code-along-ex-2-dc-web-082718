@@ -17,7 +17,32 @@
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6049.652824616553!2d-73.99786406444309!3d40.69982055432026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a47df06b185%3A0xc889234bc07c42ee!2sBrooklyn+Heights%2C+Brooklyn%2C+NY!5e0!3m2!1sen!2sus!4v1532971188412" width="425" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
   
   <!-- Contact Form -->
-  
+  <form action="#" method="post">
+      <!--
+        action="#": since we havent set up a php server use the # to leave a placeholder.
+    
+        method="post": the contact form is going to have imput lablest for a user to put their name, eamil, and -optionally- a phone number then it will give them a place to leave a message. So this contact form will post this information to our php server that will then send us an email with their message.
+      -->
+      
+    <label for="fullname">Name</label>
+    <input id="fullname" type="text" name="fullname" placeholder="your name" required>
+      <!--
+        Lets say you want a user to be able to click on the label and have it automatically
+        bring the users curser inside the input. To do that first give the input an id then inside the
+        opening label tag use the for attribute. The for attribute bounds a label with a
+        specific input field based off the id you gave it.
+      -->
+      
+    <label for="email">Email</label>  
+    <input id="email" type="email" name="email" placeholder="your email" required>
+    
+    <label form="phone">Phone</label>
+    <input id="phone" type="tel" name="phone" placeholder="your phone number (optional)">
+    
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="10" required></textarea>
+    <input type="submit" value="send">
+  </form>
   
 </body>
 </html>
